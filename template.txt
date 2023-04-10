@@ -1,0 +1,17 @@
+library IEEE;
+use IEEE.std_logic_1164.ALL;
+{library}
+entity {entityName} is
+	port (
+		{ports}
+	);
+end entity;
+
+architecture Behavioral of {entityName} is
+begin
+	process ({process_inputs})
+	{variables}
+		begin
+		{process}
+	end process;
+end architecture;

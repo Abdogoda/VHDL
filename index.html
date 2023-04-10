@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VHDL</title>
+  <link rel="stylesheet" href="style.css" />
+ </head>
+ <body>
+  <div class="container">
+   <form id="my-form">
+    <h1>Generate VHDL Code</h1>
+    <div class="form-container">
+     <div class="form-group">
+      <label for="entitnyName">Entity Name</label>
+      <input type="text" name="entitnyName" placeholder="EG: entity_name" />
+     </div>
+     <div class="form-group">
+      <label for="model">Logical Model</label>
+      <select name="model" id="model" onchange="selectSize()">
+       <option value="" disabled>Select The Logical Model</option>
+      </select>
+     </div>
+     <div class="form-group">
+      <label for="size">Model Size</label>
+      <select name="size" id="size">
+       <option value="" disabled>Select The Size</option>
+      </select>
+     </div>
+     <div class="form-group">
+      <label for="model">Data Type</label>
+      <select name="type" id="type">
+       <option value="" disabled>Select The Data Type</option>
+      </select>
+     </div>
+    </div>
+    <button type="submit" class="btn">Generate Code</button>
+   </form>
+   <div class="text">
+    <div class="content"></div>
+    <div class="buttons">
+     <button onclick="export_code()">Export</button>
+     <button onclick="copy_code()">Copy</button>
+    </div>
+   </div>
+  </div>
+  <div class="pre-loader">
+   <lottie-player
+    class="loader"
+    src="https://assets4.lottiefiles.com/private_files/lf30_dj56r8ie.json"
+    background="transparent"
+    speed="1"
+    autoplay
+   ></lottie-player>
+  </div>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script>
+   setTimeout(function () {
+    document.querySelector(".pre-loader").style.display = "none";
+   }, 3000);
+  </script>
+  <script src="main.js"></script>
+ </body>
+</html>
